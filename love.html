@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  height:100vh;display:flex;justify-content:center;align-items:center;
+  background: radial-gradient(circle at top, #ffd6e7, #ff8fab);
+  font-family:'Poppins',sans-serif;overflow:hidden
+}
+.card{
+  background:white;width:90%;max-width:380px;padding:32px 24px;
+  border-radius:32px;text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+  animation: pop .8s ease
+}
+@keyframes pop{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:1}}
+h1{font-family:'Dancing Script',cursive;font-size:38px;color:#ff2e63}
+p{color:#666;font-size:14px;margin:12px 0 24px;line-height:1.6}
+.emoji{font-size:64px;animation: beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+.btn-area{position:relative;height:120px;margin-top:10px}
+button{
+  padding:14px 32px;border:none;border-radius:100px;
+  font-weight:700;font-size:15px;cursor:pointer;transition:.2s;
+  position:absolute;
+}
+#yesBtn{background:#ff2e63;color:white;left:50%;transform:translateX(-110%);box-shadow:0 8px 20px rgba(255,46,99,.4)}
+#noBtn{background:#eee;color:#333;left:50%;transform:translateX(10%)}
+#yesBtn:hover{transform:translateX(-110%) scale(1.05)}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="emoji">🥺👉👈</div>
+  <h1 id="title">halo kakaa</h1>
+  <p id="text">aku udah lama mengagumimuu<br><br>apakahh kaka mau jadi temanku? <br>jangan bikin aku kangen lama</p>
+  <div class="btn-area">
+    <button id="yesBtn" onclick="diterima()">MAU! ❤️</button>
+    <button id="noBtn" onmouseover="kabur()" onclick="kabur()">Gak dulu</button>
+  </div>
+</div>
+
+<script>
+function kabur(){
+  const btn = document.getElementById('noBtn');
+  const x = Math.random()*200 - 100;
+  const y = Math.random()*80 - 40;
+  btn.style.left = 50 + x + '%';
+  btn.style.top = y + 'px';
+}
+function diterima(){
+  document.getElementById('card').innerHTML = `
+    <div class="emoji">😍💖</div>
+    <h1>YEAYY!!!</h1>
+    <p>aku tau pasti kaka mau<br><br>makasii kakaa uda mau jadi temen aku walaupun cuma just friend sih tapi aku uda kangen lamaa lope u<br><br>SS ini kirim ke aku ya!</p>
+    <a href="https://wa.me/6282319901704?text=AKU%20MAU%20JADI%20TEMEN%20KAMU%20❤️" 
+    style="display:inline-block;margin-top:16px;background:#25D366;color:white;padding:14px 28px;border-radius:100px;text-decoration:none;font-weight:700">CHAT AKU DI WA 💬</a>
+  `;
+  // hujan hati
+  setInterval(()=>{
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position='fixed';
+    heart.style.left = Math.random()*100+'vw';
+    heart.style.top='-10px';
+    heart.style.fontSize='20px';
+    heart.style.animation='fall 3s linear';
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),3000)
+  },150)
+}
+</script>
+<style>@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}</style>
+</body>
+</html>
