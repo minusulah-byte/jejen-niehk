@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@kamu - Link Bio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  min-height:100vh;
+  background: linear-gradient(180deg,blue 0%,red 50%,#ff9a8b 100%);
+  display:flex;justify-content:center;padding:30px 16px
+}
+.phone{
+  width:100%;max-width:400px;
+  text-align:center;
+}
+.avatar{
+  width:110px;height:110px;border-radius:50%;
+  border:4px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.15);
+  object-fit:cover;margin-top:20px
+}
+h1{margin-top:14px;font-size:22px;font-weight:700}
+p.bio{color:white;font-size:13px;margin:6px 0 22px;line-height:1.5}
+.link{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#ffffff;backdrop-filter:blur(10px);
+  padding:16px 20px;border-radius:100px;
+  margin:14px 0;text-decoration:none;color:#000;
+  font-weight:600;font-size:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transition:.25s;transform:translateY(0)
+}
+.link:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 24px rgba(0,0,0,.15)}
+.link span.icon{font-size:20px}
+.link span.arrow{background:#000;color:#fff;width:32px;height:32px;border-radius:50%;display:flex;justify-content:center;align-items:center}
+.social{display:flex;justify-content:center;gap:16px;margin-top:28px}
+.social a{width:44px;height:44px;background:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+footer{margin-top:30px;font-size:11px;color:white;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="phone">
+  <!-- GANTI DISINI AJA -->
+  <img class="avatar" src="https://i.pravatar.cc/300?img=68" alt="foto">
+  <h1>@nallisback</h1>
+  <p class="bio">zaenal orang majalengka  🚀<br>kelas 10 pepelegeg.</p>
+
+  <!-- LINK-LINKNYA -->
+  <a class="link" href="https://whatsapp.com/channel/0029Vb94RHp65yD3nTvRkO2M" target="_blank">
+    <span><span class="icon">💬</span> Chat WhatsApp</span><span class="arrow">↗</span>
+  </a>
+  <a class="link" href="https://shopee.co.id" target="_blank">
+    <span><span class="icon">🛒</span> Toko Shopee Gue</span><span class="arrow">↗</span>
+  </a>
+  <a class="link" href="https://www.instagram.com/zaenal1_2?stkn=bHlwbGwxbnZyYTdq" target="_blank">
+    <span><span class="icon">📷</span> Instagram</span><span class="arrow">↗</span>
+  </a>
+  <a class="link" href="https://www.tiktok.com/@nall_jek?_r=1&_t=ZS-99zFrlDlvbY" target="_blank">
+    <span><span class="icon">🎵</span> TikTok</span><span class="arrow">↗</span>
+  </a>
+  <a class="link" href="https://goo.gl/maps/XFdbwBQT9zNdUCXC9" target="_blank">
+    <span><span class="icon">📍</span> desa maniis</span><span class="arrow">↗</span>
+  </a>
+
+  <div class="social">
+    <a href="#">IG</a>
+    <a href="#">TT</a>
+    <a href="#">WA</a>
+  </div>
+
+  <footer>MADE WITH ❤️ IN CINGAMBUL 2026</footer>
+</div>
+</body>
+</html>
